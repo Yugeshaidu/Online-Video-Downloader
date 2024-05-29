@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Downloader</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <img id="background-image" src="{{ url_for('static', filename='images/jupiter.jpeg') }}" alt="Background Image">
+    <div class="container">
+        <h1>Video Downloader</h1>
+        <form method="post">
+            <label for="url">Video URL:</label>
+            <input type="text" id="url" name="url" required>
+            <br><br>
+            <label for="format">Format:</label>
+            <select id="format" name="format">
+                <option value="mp4">MP4</option>
+                <option value="mp3">MP3</option>
+            </select>
+            <br><br>
+            <button type="submit">Download</button>
+        </form>
+    </div>
+</body>
+</html>
