@@ -1,3 +1,12 @@
 [build]
+  command = "npm run build"
+  publish = "build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[build]
   publish = "static"
   command = "pip install -r requirements.txt && python3 app.py"
